@@ -2,19 +2,11 @@ from pyevsim.behavior_model_executor import BehaviorModelExecutor
 from pyevsim.system_message import SysMessage
 from pyevsim.definition import *
 
-import datetime
-
-
 class FetchModel(BehaviorModelExecutor):
-
-    def __init__(self, instance_time, destruct_time, name, engine_name, _id,
-                 _hu):
+    def __init__(self, instance_time, destruct_time, name, engine_name):
         BehaviorModelExecutor.__init__(self, instance_time, destruct_time,
                                        name, engine_name)
-
-        pass
-
-        self.recv_info = None
+        
 
     def ext_trans(self, port, msg):
         #실선
